@@ -20,7 +20,7 @@ exports.create = (req, res) => {
     price: req.body.price
   };
 
-  // Save Bicycle in the database
+  // Save a TV in the database
   TV.create(tv)
     .then(data => {
       res.send(data);
@@ -33,7 +33,7 @@ exports.create = (req, res) => {
     });
 };
 
-// Retrieve all Bicycles from the database.
+// Retrieve all TVs from the database.
 exports.findAll = (req, res) => {
   
     TV.findAll()
@@ -48,7 +48,7 @@ exports.findAll = (req, res) => {
       });
 };
 
-// Find a single Bicycle with an id
+// Find a single TVs with an id
 exports.findOne = (req, res) => {
   let id = req.params.id;
   TV.findByPk(id)
@@ -75,7 +75,7 @@ exports.findOne = (req, res) => {
     });
 };
 
-// Update a Bicycle by the id in the request
+// Update a TV by the id in the request
 exports.update = (req, res) => {
   const id = req.params.id;
 
@@ -100,7 +100,7 @@ exports.update = (req, res) => {
     });
 };
 
-// Delete a Tutorial with the specified id in the request
+// Delete a TV with the specified id in the request
 exports.delete = (req, res) => {
   const id = req.params.id;
 
@@ -125,7 +125,7 @@ exports.delete = (req, res) => {
     });
 };
 
-// Delete all Bicycles from the database.
+// Delete all TVs from the database.
 exports.deleteAll = (req, res) => {
   TV.destroy({
     where: {},
